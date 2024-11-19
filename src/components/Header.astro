@@ -1,0 +1,24 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import SocialIcon from './SocialIcon.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<header class="bg-background shadow-sm">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <h2 class="font-montserrat text-xl font-bold text-primary"><a href="/">{SITE_TITLE}</a></h2>
+      
+      <div class="hidden md:flex space-x-8">
+        <HeaderLink href="/">Home</HeaderLink>
+        <HeaderLink href="/blog">Blog</HeaderLink>
+        <HeaderLink href="/about">About</HeaderLink>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <SocialIcon platform="github" username="deankeesey" />
+        <SocialIcon platform="linkedin" username="dean-keesey" />
+      </div>
+    </div>
+  </nav>
+</header>

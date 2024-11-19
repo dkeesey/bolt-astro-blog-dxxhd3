@@ -1,0 +1,49 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+
+@import '@fontsource/montserrat/400.css';
+@import '@fontsource/montserrat/500.css';
+@import '@fontsource/montserrat/600.css';
+@import '@fontsource/montserrat/700.css';
+@import '@fontsource/hind/400.css';
+@import '@fontsource/hind/500.css';
+@import '@fontsource/hind/600.css';
+
+:root {
+  --black: 38, 33, 37;
+  --gray: 101, 108, 116;
+  --accent: 164, 127, 72;
+  --gray-light: 238, 237, 232;
+  --box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
+    0 16px 32px rgba(var(--gray), 33%);
+}
+
+body {
+  font-family: 'Hind', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background: rgb(var(--gray-light));
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: rgb(var(--gray));
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 0 0.5rem 0;
+  color: rgb(var(--black));
+  line-height: 1.2;
+}
+
+/* Rest of the global styles remain the same */

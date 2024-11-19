@@ -1,0 +1,47 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<div class="relative isolate overflow-hidden bg-background">
+  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+    <div class="mx-auto max-w-7xl lg:flex lg:items-center lg:gap-x-16">
+      <div class="lg:w-1/2">
+        <div class="relative">
+          <img
+            src="/dean-headshot.jpg"
+            alt="Dean Keesey - Senior Software Engineer"
+            class="aspect-square w-full max-w-md rounded-2xl object-cover shadow-xl"
+            width="800"
+            height="800"
+          />
+          <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/10"></div>
+        </div>
+      </div>
+      
+      <div class="mt-12 lg:mt-0 lg:w-1/2">
+        <h1 class="font-montserrat text-4xl font-bold tracking-tight text-primary sm:text-6xl">
+          {title}
+        </h1>
+        <p class="mt-6 font-hind text-lg leading-8 text-text">
+          {description}
+        </p>
+        <div class="mt-10 flex items-center gap-x-6">
+          <a
+            href="/about"
+            class="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-background shadow-sm hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors duration-200"
+          >
+            Learn more
+          </a>
+          <a href="/blog" class="font-montserrat text-sm font-semibold leading-6 text-primary hover:text-secondary transition-colors duration-200">
+            Read blog <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
