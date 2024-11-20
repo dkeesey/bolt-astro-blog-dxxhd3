@@ -1,0 +1,127 @@
+---
+interface Company {
+  name: string;
+  logo: string;
+  role: string;
+  period: string;
+  description: string[];
+}
+
+const experience: Company[] = [
+  {
+    name: "Support Logic",
+    logo: "/logos/support-logic.jpeg",
+    role: "Senior UI Engineer",
+    period: "Sep 2021 - Apr 2022",
+    description: [
+      "Built and optimized React components with TypeScript, implementing comprehensive unit testing using Jest and Husky",
+      "Leveraged Chrome DevTools Performance profiling to optimize component rendering and reduce Time to Interactive",
+      "Collaborated with UX and product teams to deliver performant user interfaces while maintaining design fidelity"
+    ]
+  },
+  {
+    name: "Masumi Hayashi Foundation",
+    logo: "/logos/masumi-hayashi.png",
+    role: "Founder & Lead Developer",
+    period: "Jun 2016 - Present",
+    description: [
+      "Architected and developed a Progressive Web Application using React and Gatsby.js, achieving 90+ Google Chrome Lighthouse performance score",
+      "Implemented CI/CD pipeline with Github, Gatsby cloud, Netlify, and Google DNS",
+      "Developed mobile-first, responsive layouts using modern CSS Grid and Flexbox"
+    ]
+  },
+  {
+    name: "SAP SuccessFactors",
+    logo: "/logos/connector-logo-sap-successfactors.png",
+    role: "Senior UI Engineer",
+    period: "Jul 2014 - May 2016",
+    description: [
+      "Led development of 'Action Search' feature unifying access to key workflows across 8 product modules",
+      "Used Chrome DevTools to monitor and optimize First Contentful Paint and other key performance metrics",
+      "Developed and maintained shared UI components used by multiple product teams, ensuring consistent functionality"
+    ]
+  },
+  {
+    name: "Guidewire Software",
+    logo: "/logos/guidewire.jpeg",
+    role: "Software Engineer",
+    period: "Apr 2013 - Nov 2013",
+    description: [
+      "Led performance optimization efforts using Chrome DevTools profiling to improve application responsiveness",
+      "Implemented custom SCSS/CSS architecture focusing on performance and maintainability",
+      "Delivered optimized UI implementations meeting strict performance requirements for insurance industry solutions"
+    ]
+  },
+  {
+    name: "GreatSchools",
+    logo: "/logos/greatschools-logo-ollie-large.png",
+    role: "Front End Engineer",
+    period: "Oct 2012 - Nov 2012",
+    description: [
+      "Contributed to major site redesign effort for 1M+ visitors/day educational website",
+      "Implemented responsive designs using HTML5, CSS3, jQuery, JavaScript, and JSP",
+      "Optimized frontend performance for high-traffic educational platform"
+    ]
+  },
+  {
+    name: "Electronic Arts",
+    logo: "/logos/Electronic-Arts-Logo.png",
+    role: "Software Engineer II",
+    period: "Oct 2008 - Sep 2009",
+    description: [
+      "Developed customer-facing e-commerce and community features for Spore.com",
+      "Built responsive single-page applications optimized for cross-browser compatibility",
+      "Implemented real-time user interaction features using Direct Web Remoting"
+    ]
+  },
+  {
+    name: "US Oncology",
+    logo: "/logos/iknowmed-80.jpg",
+    role: "Software Engineer II - UI",
+    period: "Apr 2006 - Oct 2008",
+    description: [
+      "Developed UI for enterprise electronic medical records application",
+      "Created specialized interfaces for oncology treatment workflows",
+      "Implemented responsive designs for medical professional users"
+    ]
+  }
+];
+---
+
+<div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+  <div class="grid gap-y-20 gap-x-8">
+    {experience.map((company) => (
+      <div class="flex flex-col lg:flex-row gap-x-12">
+        <div class="lg:w-1/3 flex-shrink-0">
+          <div class="bg-white p-6 rounded-lg shadow-sm h-[300px] w-[300px] flex items-center justify-center">
+            <img
+              src={company.logo}
+              alt={`${company.name} logo`}
+              class="w-full h-full object-contain"
+            />
+          </div>
+        </div>
+        <div class="lg:w-2/3">
+          <h3 class="text-xl font-semibold text-primary font-montserrat">
+            {company.role}
+          </h3>
+          <div class="mt-1 flex items-center gap-x-2 text-sm text-text">
+            <span class="font-semibold text-secondary">{company.name}</span>
+            <span>•</span>
+            <span>{company.period}</span>
+          </div>
+          <ul class="mt-4 space-y-2">
+            {company.description.map((item) => (
+              <li class="text-text flex gap-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 flex-none text-secondary">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
