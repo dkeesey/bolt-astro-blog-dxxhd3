@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 # add test.bash to the gitignore
 test.bash
+
+# Ignore the virtual environment directory
+venv/
+
