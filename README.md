@@ -1,37 +1,51 @@
-# Astro Starter Kit: Blog
+# Dean Keesey's Personal Site
 
-```sh
-npm create astro@latest -- --template blog
-```
+A personal portfolio and blog built with Astro, React, and TailwindCSS.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+## Development Workflow
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+1. Open project in bolt.new:
+   - Prepend `https://bolt.new/` to your GitHub repo URL
+   - Example: `https://bolt.new/yourusername/your-repo`
 
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+2. Make changes in bolt.new editor
 
-Features:
+3. Export changes:
+   - Download the zip file from bolt.new
+   - This contains all your modifications
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+4. Sync changes locally:
+   ```bash
+   # If using the alias
+   bolt-sync path/to/downloaded/bolt-export.zip
 
-## 🚀 Project Structure
+   # Or run directly
+   python3 bolt_sync.py path/to/downloaded/bolt-export.zip
+   ```
+
+5. Review and commit:
+   - Check changes: `git diff`
+   - Stage changes: `git add .`
+   - Commit and push
+
+Note: The sync script will:
+- Create a backup branch for safety
+- Extract the zip file
+- Copy changes to your project
+- Show git status
+- Guide you through next steps
+
+## Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 ├── public/
 ├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
+│   ├── components/
+│   ├── content/
+│   ├── layouts/
+│   └── pages/
 ├── astro.config.mjs
 ├── README.md
 ├── package.json
@@ -58,10 +72,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
 ## Credit
 
